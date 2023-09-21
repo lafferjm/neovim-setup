@@ -1,5 +1,8 @@
 return {
     'nvim-tree/nvim-tree.lua',
+    dependencies = {
+        "nvim-tree/nvim-web-devicons"
+    },
     config = function()
         local function my_on_attach(bufnr)
             local api = require('nvim-tree.api')
