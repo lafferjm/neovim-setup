@@ -20,7 +20,7 @@ return {
     config = function()
         local lsp_zero = require('lsp-zero')
 
-        lsp_zero.on_attach(function(client, bufnr)
+        lsp_zero.on_attach(function(_, bufnr)
             lsp_zero.default_keymaps({buffer = bufnr})
         end)
 
@@ -35,6 +35,16 @@ return {
             handlers = {
                 lsp_zero.default_setup
             }
+        })
+
+        local cmp = require('cmp')
+        cmp.setup({
+            mapping = cmp.mapping.preset.insert({
+                ['<C-p>'] = cmp.mapping.select_prev_item(),
+                ['<C-n>'] = cmp.mapping.select_next_item(),
+                ['<C-y>'] = cmp.mapping.confirm({select = true}),
+                ['<C-Space>'] = cmp.mapping.complete()
+            })
         })
     end
 }
