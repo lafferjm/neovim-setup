@@ -1,4 +1,3 @@
-
 vim.opt.guicursor = ""
 
 vim.opt.nu = true
@@ -20,6 +19,8 @@ vim.opt.undofile = true
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 vim.opt.termguicolors = true
 
@@ -35,4 +36,3 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 vim.g.mapleader = " "
-
