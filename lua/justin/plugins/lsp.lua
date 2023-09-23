@@ -21,7 +21,7 @@ return {
         local lsp_zero = require('lsp-zero')
 
         lsp_zero.on_attach(function(_, bufnr)
-            local opts = {buffer = bufnr, remap = false}
+            local opts = { buffer = bufnr, remap = false }
             lsp_zero.default_keymaps({ buffer = bufnr })
 
             vim.keymap.set('n', '<leader>vca', function() vim.lsp.buf.code_action() end, opts)
@@ -50,7 +50,7 @@ return {
             mapping = cmp.mapping.preset.insert({
                 ['<C-p>'] = cmp.mapping.select_prev_item(),
                 ['<C-n>'] = cmp.mapping.select_next_item(),
-                ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+                ['<Tab>'] = cmp.mapping.confirm({ select = true }),
                 ['<C-Space>'] = cmp.mapping.complete()
             })
         })
