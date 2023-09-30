@@ -31,3 +31,5 @@ vim.keymap.set("n", "<leader>wL", "<C-w>L")
 
 vim.keymap.set("n", "<leader>wr", "<C-w>r")
 vim.keymap.set("n", "<leader>wR", "<C-w>R")
+
+vim.keymap.set("n", "<leader>w=", "<C-w>=")
