@@ -8,9 +8,6 @@ return {
         vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
         vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 
-        telescope.load_extension("flutter")
-        vim.keymap.set('n', '<leader>pm', telescope.extensions.flutter.commands)
-
         telescope.load_extension("dap")
         vim.keymap.set('n', '<leader>pd', telescope.extensions.dap.commands)
     end
