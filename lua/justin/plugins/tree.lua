@@ -20,8 +20,12 @@ return {
             on_attach = my_on_attach,
             filters = {
                 dotfiles = false,
+                git_ignored = false,
                 custom = { '^.git$' },
             },
+            git = {
+                enable = true,
+            }
         })
     end
 }
