@@ -316,9 +316,9 @@ vim.o.hlsearch = false
 vim.wo.number = true
 vim.opt.relativenumber = true
 
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 
 -- Enable mouse mode
@@ -381,7 +381,7 @@ vim.keymap.set('n', '<leader>wH', '<C-w>H', { desc = 'Move [W]indow far left' })
 vim.keymap.set('n', '<leader>wL', '<C-w>L', { desc = 'Move [W]indow far right' })
 
 vim.keymap.set('n', '<leader>wr', '<C-w>r', { desc = 'Rotate splits clockwise' })
-vim.keymap.set('n', '<leader>wr', '<C-w>R', { desc = 'Rotate splits counter clockwise' })
+vim.keymap.set('n', '<leader>wR', '<C-w>R', { desc = 'Rotate splits counter clockwise' })
 
 
 -- [[ Highlight on yank ]]
