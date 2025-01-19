@@ -62,6 +62,14 @@ return {
       desc = '[S]earch [D]iagnostics',
     },
     {
+      '<leader>sr',
+      function()
+        Snacks.picker.resume()
+      end,
+      desc = '[S]earch [R]esume',
+    },
+    -- LSP Jump Bindings
+    {
       'gd',
       function()
         Snacks.picker.lsp_definitions()
