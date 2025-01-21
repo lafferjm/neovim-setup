@@ -59,6 +59,15 @@ return {
           end,
         },
       }
+
+      local map = function(keys, func, desc, mode)
+        mode = mode or 'n'
+        vim.keymap.set(mode, keys, func, { desc = 'LSP: ' .. desc })
+      end
+
+      map('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
+      map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction', { 'n', 'x' })
+      map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
     end,
   },
 }
