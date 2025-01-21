@@ -79,7 +79,7 @@ return {
     {
       'gr',
       function()
-        Snacks.pciker.lsp_references()
+        Snacks.picker.lsp_references()
       end,
       nowait = true,
       desc = 'Goto References',
