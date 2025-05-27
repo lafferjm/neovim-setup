@@ -21,7 +21,6 @@ return {
       },
       signature = { enabled = true },
       sources = {
-        cmdline = {},
         default = { 'lsp', 'path', 'buffer' },
       },
     },
@@ -44,22 +43,7 @@ return {
     },
     config = function()
       require('mason').setup()
-      require('mason-lspconfig').setup {
-        ensure_installed = { 'lua_ls' },
-        automatic_installation = true,
-        handlers = {
-          function(server_name)
-            local capabilities = vim.lsp.protocol.make_client_capabilities()
-            capabilities = vim.tbl_deep_extend('force', capabilities, require('blink.cmp').get_lsp_capabilities())
-
-            local servers = {}
-            local server = servers[server_name] or {}
-            server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
-
-            require('lspconfig')[server_name].setup(server)
-          end,
-        },
-      }
+      require('mason-lspconfig').setup {}
 
       local map = function(keys, func, desc, mode)
         mode = mode or 'n'
