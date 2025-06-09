@@ -13,3 +13,5 @@ vim.keymap.set('n', '<leader>wL', '<C-w>L', { desc = 'Move [W]indow far right' }
 
 vim.keymap.set('n', '<leader>wr', '<C-w>r', { desc = 'Rotate splits clockwise' })
 vim.keymap.set('n', '<leader>wR', '<C-w>R', { desc = 'Rotate splits counter clockwise' })
+
+vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = "[C]ode [A]ction" })
