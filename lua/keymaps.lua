@@ -15,3 +15,4 @@ vim.keymap.set('n', '<leader>wr', '<C-w>r', { desc = 'Rotate splits clockwise' }
 vim.keymap.set('n', '<leader>wR', '<C-w>R', { desc = 'Rotate splits counter clockwise' })
 
 vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = "[C]ode [A]ction" })
+vim.keymap.set('n', '<leader>cr', vim.lsp.buf.rename, { desc = "[C]ode [R]ename" })
