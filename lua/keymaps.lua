@@ -16,3 +16,7 @@ vim.keymap.set('n', '<leader>wR', '<C-w>R', { desc = 'Rotate splits counter cloc
 
 vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = "[C]ode [A]ction" })
 vim.keymap.set('n', '<leader>cr', vim.lsp.buf.rename, { desc = "[C]ode [R]ename" })
+
+vim.keymap.set('n', '<leader>td', function()
+  vim.diagnostic.enable(not vim.diagnostic.is_enabled())
+end, { silent = true, noremap = true, desc = "[T]oggle [D]iagnostics" })
