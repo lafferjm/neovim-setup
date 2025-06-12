@@ -17,7 +17,6 @@ return {
     scroll = { enabled = false },
     statuscolumn = { enabled = true },
     words = { enabled = false },
-    --    explorer = {},
   },
   keys = {
     {
@@ -106,12 +105,5 @@ return {
       end,
       desc = 'LSP Symbols',
     },
-    {
-      '<leader>ft',
-      function()
-        Snacks.explorer()
-      end,
-      desc = '[F]ile [T]ree',
-    }
   },
 }
